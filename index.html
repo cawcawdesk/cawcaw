@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+Cawcaw | Breaking Silence. Not Breaking News. 
+</title>
+
+<meta name="description"
+content="Cawcaw is a responsible voice platform sharing perspectives, society, environment and stories that deserve attention.">
+
+<link rel="icon" href="\images\nature\2026\cawcaw.png">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family: Georgia,'Times New Roman',serif;
+background:#fafafa;
+color:#111;
+}
+
+
+/* HEADER */
+
+header{
+height:72px;
+padding:0 7%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #ddd;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-size:28px;
+font-weight:bold;
+letter-spacing:5px;
+}
+
+
+.logo img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+    
+    
+   											 /* CROW LOGO ANIMATION */
+
+.logo img,
+.hero img,
+footer img{
+animation:crowFloat 4s ease-in-out infinite;
+transform-origin:center;
+}
+
+
+@keyframes crowFloat{
+
+0%{
+transform:translateY(0) rotate(0deg) scale(1);
+}
+
+25%{
+transform:translateY(-8px) rotate(-3deg) scale(1.04);
+}
+
+50%{
+transform:translateY(0) rotate(0deg) scale(1);
+}
+
+75%{
+transform:translateY(-5px) rotate(3deg) scale(1.03);
+}
+
+100%{
+transform:translateY(0) rotate(0deg) scale(1);
+}
+
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+.logo span{
+color:#a98226;
+}
+
+
+nav a{
+margin-left:22px;
+font-size:15px;
+text-decoration:none;
+color:#222;
+}
+
+
+.post{
+background:#111;
+color:white;
+padding:9px 18px;
+border-radius:20px;
+}
+
+
+
+
+/* HERO */
+
+
+.hero{
+padding:35px 8%;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:30px;
+background:white;
+border-bottom:1px solid #ddd;
+}
+
+
+.hero img{
+width:100%;
+max-height:360px;
+object-fit:contain;
+}
+
+
+.hero h1{
+font-size:60px;
+letter-spacing:8px;
+margin:0;
+}
+
+
+.hero h2{
+font-size:28px;
+color:#a98226;
+}
+
+
+.hero p{
+font-size:20px;
+line-height:1.5;
+}
+
+
+
+
+/* CONTENT */
+
+
+.wrapper{
+
+display:grid;
+grid-template-columns:2fr 0.8fr;
+gap:45px;
+padding:40px 8%;
+
+}
+
+
+
+
+.article{
+
+display:flex;
+gap:20px;
+padding:22px 0;
+border-bottom:1px solid #ddd;
+
+}
+
+
+
+.article img{
+
+width:210px;
+height:130px;
+object-fit:cover;
+
+}
+
+
+.category{
+
+font-size:12px;
+font-weight:bold;
+color:#a98226;
+
+}
+
+
+
+.article h2{
+
+font-size:26px;
+margin:8px 0;
+
+}
+
+
+.article p{
+
+color:#555;
+font-size:16px;
+
+}
+
+
+
+
+/* RIGHT SIDE */
+
+.sidebar{
+
+border-left:1px solid #ddd;
+padding-left:25px;
+
+}
+
+
+
+.sidebox{
+
+padding-bottom:20px;
+margin-bottom:20px;
+border-bottom:1px solid #ddd;
+
+}
+
+
+.ad{
+
+height:220px;
+background:#eee;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#777;
+
+}
+
+
+
+/* PHILOSOPHY */
+
+
+.philosophy{
+
+margin:20px 8%;
+padding:35px;
+background:#111;
+color:white;
+
+}
+
+
+.philosophy h2{
+
+color:#d0aa45;
+
+}
+
+
+
+.philosophy p{
+
+font-size:21px;
+line-height:1.6;
+
+}
+
+
+
+/* TOPICS */
+
+
+.topics{
+
+padding:35px 8%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+
+}
+
+
+.topic{
+
+background:white;
+padding:25px;
+box-shadow:0 5px 20px #ddd;
+
+}
+
+
+.topic h3{
+
+color:#a98226;
+
+}
+
+
+
+/* FOOTER */
+
+footer{
+
+background:#000;
+color:white;
+text-align:center;
+padding:30px;
+
+}
+
+
+footer img{
+
+width:80px;
+
+}
+
+
+
+
+@media(max-width:850px){
+
+
+.hero,
+.wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+
+.article{
+
+flex-direction:column;
+
+}
+
+
+.article img{
+
+width:100%;
+
+}
+
+
+.sidebar{
+
+border:0;
+padding:0;
+
+}
+
+
+.topics{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<header>
+
+
+<div class="logo">
+
+<img src="\images\nature\2026\cawcaw.png">
+
+<div>
+CAW<span>CAW</span>
+</div>
+
+</div>
+
+
+
+<nav>
+
+<a href="#">Stories</a>
+<a href="#">Society</a>
+<a href="#">Earth</a>
+<a href="#">Ideas</a>
+<a class="post" href="#">Add Voice</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+<h1>
+CAWCAW
+</h1>
+
+
+<h2>Breaking Silence.<br>
+Not Breaking News.
+
+</h2>
+
+
+<p>
+
+The crow is never silent.
+
+It observes what others ignore,
+remembers what others forget,
+and speaks when silence becomes comfortable.
+
+</p>
+
+</div>
+
+
+
+<img src="\images\nature\2026\cawcaw.png">
+
+
+</section>
+
+
+
+
+
+
+<section class="wrapper">
+
+
+<main>
+
+
+<div class="article">
+
+<img src="images/index/society.jpg">
+
+
+<div>
+
+<div class="category">
+SOCIETY
+</div>
+
+    <h2><A HREF="/when-nature-was-my-first-toy.html" > When Nature was my first toy </a> <BR>
+The stories everyone sees but nobody writes
+</h2>
+
+<p>
+A voice from ordinary streets.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="article">
+
+<img src="images/index/environment.jpg">
+
+<div>
+
+<div class="category">
+ENVIRONMENT
+</div>
+
+
+<h2>
+Watching the changing world around us
+</h2>
+
+<p>
+Nature, wildlife and human connections.
+</p>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="article">
+
+<img src="images/index/perspectives.jpg">
+
+
+<div>
+
+<div class="category">
+PERSPECTIVE
+</div>
+
+
+<h2>
+Beyond noise: responsible thinking
+</h2>
+
+<p>
+Ideas before reactions.
+</p>
+
+</div>
+
+</div>
+
+
+
+</main>
+
+
+
+
+
+
+
+<aside class="sidebar">
+
+
+<div class="sidebox">
+
+<h2>
+Most Cawed
+</h2>
+<h3><a href="/when-nature-was-my-first-toy.html">When nature was my first toy</a><h3>
+
+<p>Why small voices matter</p>
+
+<p>The unnoticed India</p>
+
+<p>Stories from the street</p>
+
+
+</div>
+
+
+
+<div class="ad">
+
+Advertisement Space
+ Available
+</div>
+
+
+
+</aside>
+
+
+</section>
+
+
+
+
+
+
+<section class="philosophy">
+
+
+<h2>
+The Crow Philosophy
+</h2>
+
+
+<p>
+
+The crow is not admired for its colours,
+nor celebrated for its song.
+
+<br><br>
+
+Yet it watches.
+It remembers.
+It warns.
+
+<br><br>
+
+Cawcaw carries that same spirit —
+ordinary, sharp and responsible.
+
+</p>
+
+
+</section>
+
+
+
+
+
+<section class="topics">
+
+
+<div class="topic">
+
+<h3>Society</h3>
+People & voices
+
+</div>
+
+
+
+<div class="topic">
+
+<h3>Environment</h3>
+Earth & wildlife
+
+</div>
+
+
+
+<div class="topic">
+
+<h3>Perspectives</h3>
+Thoughts that matter
+
+</div>
+
+
+
+<div class="topic">
+
+<h3>Change</h3>
+Solutions & hope
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+
+<img src="\images\nature\2026\cawcaw.png">
+
+
+<h2>
+CAWCAW.IN
+</h2>
+
+
+<p>
+Watch. Think. Speak.
+</p>
+
+
+</footer>
+
+
+
+</body>
+</html>
