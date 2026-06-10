@@ -424,46 +424,59 @@ width:80px;
 
 
 @media(max-width:850px){
+
 header{
+position:relative;
 height:auto;
-margin-bottom:25px;
-padding-bottom:15px;
+padding:8px 10px;
+margin-bottom:0;
+    flex-wrap:wrap;
 }
+
+.logo{
+font-size:22px;
+letter-spacing:3px;
+}
+
+.logo img{
+width:42px;
+height:42px;
+}
+
+nav a{
+font-size:14px;
+margin-left:8px;
+}
+
+.post{
+white-space:nowrap;
+}
+
 
 .hero,
 .wrapper{
-
 grid-template-columns:1fr;
-
 }
 
 
 .article{
-
 flex-direction:column;
-
 }
 
 
 .article img{
-
 width:100%;
-
 }
 
 
 .sidebar{
-
 border:0;
 padding:0;
-
 }
 
 
 .topics{
-
 grid-template-columns:1fr;
-
 }
 
 }
