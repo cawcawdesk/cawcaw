@@ -144,10 +144,9 @@ z-index:999;
 
 
 .mini-logo{
-width:70px;
-height:70px;
+width:60px;
+height:60px;
 object-fit:contain;
-margin-bottom:20px;
 animation:cawFloat 5s ease-in-out infinite;
 }
 
@@ -722,7 +721,11 @@ color:#d0aa45;
 /* MOBILE */
 
 @media(max-width:900px){
-
+header{
+height:auto;
+margin-bottom:25px;
+padding-bottom:15px;
+}
 
 .article-hero{
 
@@ -800,8 +803,12 @@ grid-template-columns:1fr;
   },
   "publisher":{
     "@type":"Organization",
-    "name":"CAWCAW"
-  },
+    "name":"CAWCAW",
+	  "logo":{
+"@type":"ImageObject",
+"url":"https://cawcaw.in/favicon.png"
+}
+},
   "articleSection":"Environment",
   "keywords":"Extinction of Experience, Masashi Soga, biodiversity, conservation, nature connection, fireflies, damselflies, crows, childhood memories, environmental education",
   "inLanguage":"en"
