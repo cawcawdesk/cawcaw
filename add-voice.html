@@ -13,6 +13,7 @@
 <meta name="description" content="Add your voice to CAWCAW. Share thoughtful stories, observations, ideas and perspectives.">
 <meta name="robots" content="index,follow">
 
+
 <style>
 
 *{
@@ -21,17 +22,22 @@ margin:0;
 padding:0;
 }
 
+
 body{
 font-family:Georgia,'Times New Roman',serif;
 background:#fafafa;
 color:#111;
 line-height:1.8;
+overflow-x:hidden;
 }
+
 
 
 /* HEADER */
 
+
 header{
+
 height:72px;
 padding:0 5%;
 background:white;
@@ -42,46 +48,72 @@ border-bottom:1px solid #ddd;
 position:sticky;
 top:0;
 z-index:999;
+
 }
 
 
 .mini-logo{
+
 width:70px;
 height:70px;
 object-fit:contain;
 animation:cawFloat 5s ease-in-out infinite;
+
 }
 
 
 .logo{
+
 font-size:28px;
 font-weight:bold;
 letter-spacing:5px;
+
 }
 
+
 .logo span{
+
 color:#a98226;
+
 }
+
 
 
 nav a{
+
 margin-left:22px;
 font-size:15px;
 text-decoration:none;
 color:#222;
+
 }
 
 
 .post{
+
 background:#111;
 color:white;
 padding:9px 18px;
 border-radius:20px;
+
 }
 
 
 
+.menu-btn{
+
+display:none;
+font-size:34px;
+cursor:pointer;
+
+}
+
+
+
+
+
 /* FLOAT */
+
 
 @keyframes cawFloat{
 
@@ -94,7 +126,11 @@ border-radius:20px;
 
 
 
+
+
+
 /* HERO */
+
 
 .hero{
 
@@ -109,6 +145,7 @@ border-bottom:1px solid #ddd;
 }
 
 
+
 .category{
 
 font-size:13px;
@@ -120,6 +157,7 @@ margin-bottom:18px;
 }
 
 
+
 .hero h1{
 
 font-size:72px;
@@ -129,6 +167,7 @@ margin-bottom:25px;
 }
 
 
+
 .subtitle{
 
 font-size:28px;
@@ -136,6 +175,7 @@ color:#555;
 max-width:850px;
 
 }
+
 
 
 .hero img{
@@ -149,7 +189,11 @@ filter:drop-shadow(0 15px 25px rgba(0,0,0,.2));
 
 
 
+
+
+
 /* MAIN */
+
 
 .voice-box{
 
@@ -162,6 +206,7 @@ border:1px solid #ddd;
 }
 
 
+
 .voice-box h2{
 
 font-size:42px;
@@ -171,12 +216,14 @@ margin-bottom:25px;
 }
 
 
+
 .voice-box p{
 
 font-size:23px;
 margin-bottom:28px;
 
 }
+
 
 
 
@@ -190,6 +237,7 @@ font-style:italic;
 margin:40px 0;
 
 }
+
 
 
 .email{
@@ -209,6 +257,7 @@ margin-top:20px;
 
 
 
+
 footer{
 
 background:#111;
@@ -217,6 +266,7 @@ padding:45px;
 text-align:center;
 
 }
+
 
 footer span{
 
@@ -227,14 +277,98 @@ color:#d0aa45;
 
 
 
+
+
+
+/* MOBILE */
+
+
 @media(max-width:900px){
+
+
+header{
+
+height:auto;
+min-height:72px;
+flex-wrap:wrap;
+
+}
+
+
+
+.mini-logo{
+
+width:55px;
+height:55px;
+
+}
+
+
+
+.logo{
+
+font-size:22px;
+letter-spacing:3px;
+
+}
+
+
+
+.menu-btn{
+
+display:block;
+
+}
+
+
+
+nav{
+
+display:none;
+width:100%;
+background:white;
+padding:20px 0;
+border-top:1px solid #ddd;
+
+}
+
+
+
+nav.show{
+
+display:block;
+
+}
+
+
+
+nav a{
+
+display:block;
+text-align:center;
+margin:15px 0;
+font-size:18px;
+
+}
+
+
+
+.post{
+
+display:inline-block;
+
+}
+
+
 
 
 .hero{
 
 display:block;
+padding:50px 8%;
 
 }
+
 
 
 .hero h1{
@@ -242,6 +376,15 @@ display:block;
 font-size:48px;
 
 }
+
+
+
+.subtitle{
+
+font-size:22px;
+
+}
+
 
 
 .hero img{
@@ -252,6 +395,8 @@ margin-top:30px;
 }
 
 
+
+
 .voice-box{
 
 margin:30px 15px;
@@ -260,32 +405,76 @@ padding:30px;
 }
 
 
+
+.voice-box h2{
+
+font-size:34px;
+
+}
+
+
+
 .voice-box p{
 
 font-size:20px;
 
 }
 
+
+
+.quote{
+
+font-size:24px;
+
 }
+
+
+
+.email{
+
+font-size:18px;
+padding:12px 24px;
+
+}
+
+
+
+}
+
 
 </style>
 
+
 </head>
+
+
 
 
 <body>
 
 
+
+
 <header>
 
+
 <img src="/images/nature/2026/cawcaw.png" class="mini-logo">
+
 
 <div class="logo">
 CAW<span>CAW</span>
 </div>
 
 
-<nav>
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+
+
+
+<nav id="mobileMenu">
 
 <a href="/">Home</a>
 <a href="#">Stories</a>
@@ -297,7 +486,11 @@ CAW<span>CAW</span>
 
 </nav>
 
+
 </header>
+
+
+
 
 
 
@@ -308,25 +501,34 @@ CAW<span>CAW</span>
 
 <div>
 
+
 <div class="category">
+
 OBSERVE • THINK • SPEAK
+
 </div>
 
 
+
 <h1>
+
 ADD YOUR VOICE
+
 </h1>
+
+
 
 
 <div class="subtitle">
 
-Not every voice needs to be loud.
+Not every voice needs to be loud.<br>
 Some simply need to be heard.
 
 </div>
 
 
 </div>
+
 
 
 
@@ -337,7 +539,13 @@ Some simply need to be heard.
 </div>
 
 
+
 </section>
+
+
+
+
+
 
 
 
@@ -346,18 +554,25 @@ Some simply need to be heard.
 <div class="voice-box">
 
 
+
 <h2>
+
 Every Caw Begins With Someone Noticing
+
 </h2>
+
+
 
 
 <p>
 
-A crow watches carefully before it calls.
+A crow watches carefully before it calls. When one crow calls, many others gather — a reminder that one thoughtful voice can awaken many more.
 CAWCAW believes meaningful voices begin the same way —
 by observing, questioning and caring.
 
 </p>
+
+
 
 
 <p>
@@ -366,6 +581,8 @@ Share the stories others walk past, the ideas that deserve another thought,
 and the small observations that reveal something larger about our world.
 
 </p>
+
+
 
 
 
@@ -378,12 +595,16 @@ Sometimes it changes because someone quietly notices.
 
 
 
+
+
 <p>
 
 Your voice can be curious, critical, hopeful, creative or different —
 but let it be thoughtful, respectful and responsible.
 
 </p>
+
+
 
 
 <p>
@@ -394,11 +615,15 @@ Send your story, article idea, reflection or perspective to:
 
 
 
+
+
 <a class="email" href="mailto:cawcawdesk@gmail.com">
 
 cawcawdesk@gmail.com
 
 </a>
+
+
 
 
 </div>
@@ -407,21 +632,55 @@ cawcawdesk@gmail.com
 
 
 
+
+
+
 <footer>
 
+
 <h2>
+
 CAW<span>CAW</span>
+
 </h2>
 
-<p>
-Breaking Silence. Not Breaking News.
-</p>
+
 
 <p>
-Watch. Think. Speak.
+
+Breaking Silence. Not Breaking News.
+
 </p>
+
+
+
+<p>
+
+Watch. Think. Speak.
+
+</p>
+
+
 
 </footer>
+
+
+
+
+
+
+
+<script>
+
+function toggleMenu(){
+
+document.getElementById("mobileMenu").classList.toggle("show");
+
+}
+
+</script>
+
+
 
 
 </body>
