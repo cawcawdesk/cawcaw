@@ -16,7 +16,6 @@
 
 <style>
 
-
 *{
 box-sizing:border-box;
 margin:0;
@@ -31,6 +30,7 @@ color:#111;
 line-height:1.8;
 overflow-x:hidden;
 }
+
 
 
 
@@ -53,13 +53,12 @@ z-index:999;
 }
 
 
-
 .mini-logo{
 
 width:70px;
 height:70px;
 object-fit:contain;
-animation:cawCall 4s ease-in-out infinite;
+animation:cawCall 5s infinite;
 transform-origin:center bottom;
 
 }
@@ -75,13 +74,11 @@ letter-spacing:5px;
 }
 
 
-
 .logo span{
 
 color:#a98226;
 
 }
-
 
 
 nav a{
@@ -117,48 +114,87 @@ cursor:pointer;
 
 
 
-/* CROW CALL */
+
+
+
+/* REAL CROW CALL */
 
 
 @keyframes cawCall{
 
 
-0%{
+0%,50%{
+
 transform:rotate(0deg) scale(1);
+
 }
 
 
-12%{
-transform:rotate(-7deg) scale(1.05);
+
+/* CAW */
+
+55%{
+
+transform:rotate(-14deg) scale(1.1);
+
 }
 
 
-20%{
-transform:rotate(6deg) scale(1.12);
+58%{
+
+transform:rotate(10deg) scale(1.15);
+
 }
 
 
-28%{
-transform:rotate(-5deg) scale(1.08);
+61%{
+
+transform:rotate(-8deg) scale(1.08);
+
 }
 
 
-36%{
-transform:rotate(4deg) scale(1.1);
-}
+65%{
 
-
-45%{
 transform:rotate(0deg) scale(1);
+
 }
 
 
-100%{
+
+
+/* CAW */
+
+72%{
+
+transform:rotate(-14deg) scale(1.1);
+
+}
+
+
+75%{
+
+transform:rotate(10deg) scale(1.15);
+
+}
+
+
+78%{
+
+transform:rotate(-8deg) scale(1.08);
+
+}
+
+
+82%,100%{
+
 transform:rotate(0deg) scale(1);
+
 }
 
 
 }
+
 
 
 
@@ -213,6 +249,7 @@ color:#555;
 
 
 
+
 .crow-area{
 
 position:relative;
@@ -222,53 +259,64 @@ display:inline-block;
 
 
 
+
 .hero img{
 
 width:250px;
-animation:cawCall 4s ease-in-out infinite;
-filter:drop-shadow(0 15px 25px rgba(0,0,0,.2));
+animation:cawCall 5s infinite;
 transform-origin:center bottom;
+filter:drop-shadow(0 15px 25px rgba(0,0,0,.2));
 
 }
+
 
 
 
 .sound{
 
 position:absolute;
-top:10px;
-right:-40px;
-font-size:22px;
+top:0;
+right:-45px;
+font-size:24px;
 font-weight:bold;
 color:#a98226;
 opacity:0;
-animation:sound 4s infinite;
+animation:cawText 5s infinite;
 
 }
 
 
 
-@keyframes sound{
 
-0%,20%,100%{
+@keyframes cawText{
+
+
+0%,50%,100%{
+
 opacity:0;
-transform:scale(.8);
+
 }
 
-30%,45%{
+
+55%,62%,72%,80%{
+
 opacity:1;
-transform:scale(1.2);
-}
+transform:scale(1.25);
 
 }
 
 
+}
 
 
 
 
 
-/* MAIN */
+
+
+
+
+/* CONTENT */
 
 
 .voice-box{
@@ -299,6 +347,7 @@ font-size:23px;
 margin-bottom:28px;
 
 }
+
 
 
 
@@ -343,12 +392,13 @@ text-align:center;
 }
 
 
-
 footer span{
 
 color:#d0aa45;
 
 }
+
+
 
 
 
@@ -362,6 +412,7 @@ color:#d0aa45;
 @media(max-width:900px){
 
 
+
 header{
 
 height:auto;
@@ -369,6 +420,7 @@ min-height:72px;
 flex-wrap:wrap;
 
 }
+
 
 
 .mini-logo{
@@ -379,11 +431,14 @@ height:55px;
 }
 
 
+
 .logo{
 
 font-size:22px;
+letter-spacing:3px;
 
 }
+
 
 
 .menu-btn{
@@ -391,6 +446,7 @@ font-size:22px;
 display:block;
 
 }
+
 
 
 nav{
@@ -424,10 +480,10 @@ font-size:18px;
 
 
 
-
 .hero{
 
 display:block;
+padding:50px 8%;
 
 }
 
@@ -438,6 +494,15 @@ display:block;
 font-size:48px;
 
 }
+
+
+
+.subtitle{
+
+font-size:22px;
+
+}
+
 
 
 
@@ -495,12 +560,13 @@ font-size:24px;
 
 </style>
 
-
 </head>
 
 
 
+
 <body>
+
 
 
 <header>
@@ -510,11 +576,14 @@ font-size:24px;
 
 
 <div class="logo">
+
 CAW<span>CAW</span>
+
 </div>
 
 
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
 
 
 
@@ -538,19 +607,27 @@ CAW<span>CAW</span>
 
 
 
+
+
 <section class="hero">
 
 
 <div>
 
+
 <div class="category">
+
 OBSERVE • THINK • SPEAK
+
 </div>
 
 
 <h1>
+
 ADD YOUR VOICE
+
 </h1>
+
 
 
 <div class="subtitle">
@@ -565,6 +642,8 @@ Some simply need to be heard.
 
 
 
+
+
 <div class="crow-area">
 
 <span class="sound">CAW<br>CAW</span>
@@ -574,7 +653,11 @@ Some simply need to be heard.
 </div>
 
 
+
+
 </section>
+
+
 
 
 
@@ -586,7 +669,9 @@ Some simply need to be heard.
 
 
 <h2>
+
 Every Caw Begins With Someone Noticing
+
 </h2>
 
 
@@ -603,12 +688,14 @@ by observing, questioning and caring.
 
 
 
+
 <p>
 
 Share the stories others walk past, the ideas that deserve another thought,
 and the small observations that reveal something larger about our world.
 
 </p>
+
 
 
 
@@ -622,12 +709,15 @@ Sometimes it changes because someone quietly notices.
 
 
 
+
+
 <p>
 
 Your voice can be curious, critical, hopeful, creative or different —
 but let it be thoughtful, respectful and responsible.
 
 </p>
+
 
 
 
@@ -638,11 +728,13 @@ Send your story, article idea, reflection or perspective to:
 </p>
 
 
+
 <a class="email" href="mailto:cawcawdesk@gmail.com">
 
 cawcawdesk@gmail.com
 
 </a>
+
 
 
 </div>
@@ -652,21 +744,27 @@ cawcawdesk@gmail.com
 
 
 
+
 <footer>
 
-
 <h2>
+
 CAW<span>CAW</span>
+
 </h2>
 
 
 <p>
+
 Breaking Silence. Not Breaking News.
+
 </p>
 
 
 <p>
+
 Watch. Think. Speak.
+
 </p>
 
 
@@ -685,6 +783,7 @@ document.getElementById("mobileMenu").classList.toggle("show");
 }
 
 </script>
+
 
 
 </body>
