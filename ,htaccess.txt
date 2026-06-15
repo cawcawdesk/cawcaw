@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Force www
+RewriteCond %{HTTP_HOST} ^cawcaw\.in$ [NC]
+RewriteRule ^(.*)$ https://www.cawcaw.in/$1 [L,R=301]
