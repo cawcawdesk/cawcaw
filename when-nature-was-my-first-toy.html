@@ -803,7 +803,71 @@ grid-template-columns:1fr;
 }
 
 }
-   							 </STYLE>    
+   							
+							
+							/* =========================
+   CAWCAW AUTHOR CARD
+========================= */
+
+.author-profile{
+margin-top:55px;
+background:#ffffff;
+padding:28px;
+border-radius:16px;
+display:flex;
+gap:25px;
+align-items:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.10);
+border-left:5px solid #4b6b3c;
+}
+
+
+.author-profile img{
+width:125px;
+height:125px;
+object-fit:cover;
+border-radius:50%;
+box-shadow:0 0 0 5px rgba(75,107,60,0.10);
+}
+
+
+.author-profile h3{
+margin:0 0 8px;
+color:#1b3b1b;
+font-size:22px;
+}
+
+
+.author-profile .role{
+font-size:15px;
+color:#4b6b3c;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+
+.author-profile p{
+font-size:16px;
+line-height:1.7;
+color:#444;
+margin:0;
+}
+
+
+@media(max-width:700px){
+
+.author-profile{
+flex-direction:column;
+text-align:center;
+}
+
+}
+							
+							
+							
+							
+							
+							</STYLE>    
     
     
     
@@ -1339,15 +1403,46 @@ they must first be given the chance to meet it.
 
 </div>
 
-<div class="author-box">
+<div class="author-profile">
 
-<h3>About the Author</h3>
+<img src="/images/authors/jigyasa.jpg"
+alt="Jigyasa Sood">
+
+<div>
+
+<h3>Jigyasa Sood</h3>
+
+<div class="role">
+Young Voice • Nature & Biodiversity
+</div>
 
 <p>
-<b>Jigyasa Sood</b> is a young conservationist and thinker with a deep interest in biodiversity, wildlife and nature. She writes observations on society, nature and everyday moments that reveal larger stories. Her perspectives focus on curiosity, responsibility and noticing what often remains unnoticed.
+
+<b>Jigyasa Sood</b> explores the small connections between
+people and nature. Her reflections focus on childhood,
+biodiversity, disappearing natural experiences and the
+ordinary moments that shape our relationship with the living world.
+
 </p>
 
 </div>
+
+</div>
+
+<div class="note">
+
+<h3>CONTINUE THE JOURNEY</h3>
+
+<p>
+Next:
+<a href="/the-road-that-refused-to-die.html">
+The Road That Refused to Die
+</a>
+</p>
+
+</div>
+
+		  
 <div class="note">
 <p>
 CAWCAW welcomes thoughtful feedback, comments, and perspectives.
@@ -1377,15 +1472,29 @@ Write to us at
 
 <div class="sidebox">
 
-<h3>Related Themes</h3>
+<h3>Next Most Cawed</h3>
 
-<p>Biodiversity</p>
+<h3>
+<a href="/the-road-that-refused-to-die.html">
+The Road That Refused to Die
+</a>
+</h3>
 
-<p>Nature Education</p>
+<p>
+How forgotten landscapes preserve memories across centuries.
+</p>
 
-<p>Conservation</p>
 
-<p>Urbanisation</p>
+<h3>
+<a href="/the-most-important-desk.html">
+The Most Important Desk Was Not Inside
+</a>
+</h3>
+
+<p>
+A small cart, technology and dreams outside an exam centre.
+</p>
+
 
 </div>
 
@@ -1407,7 +1516,23 @@ Help The CAW Travel Further
 
 <div class="card">
 <div class="cat">ENVIRONMENT</div>
-<h3>Related Article Title</h3>
+
+<div class="card">
+
+<div class="cat">HERITAGE</div>
+
+<h3>
+<a href="/the-road-that-refused-to-die.html">
+The Road That Refused to Die
+</a>
+</h3>
+
+<p>
+A 500-year-old road hidden beneath modern Punjab.
+</p>
+
+</div>
+		  
 <p>Short description.</p>
 </div>
 
@@ -1454,6 +1579,15 @@ Watch. Think. Speak.
 </p>
 
 </footer>
+<div style="display:none">
 
+<p>
+CAWCAW environmental stories explore biodiversity,
+childhood nature memories, extinction of experience,
+fireflies, crows, damselflies, conservation education,
+urban ecology and human relationships with nature.
+</p>
+
+</div>
 </body>
 </html>
